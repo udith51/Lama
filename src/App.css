@@ -1,38 +1,67 @@
-.App {
-  text-align: center;
-}
+@import url('https://fonts.googleapis.com/css2?family=Water+Brush&display=swap');
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar {
+  height: 40px;
+  padding: 10px 20px;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.left {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding: 0px 3px;
+}
+
+.language {
+  cursor: pointer;
+}
+
+.search-box {
+  border: 0.5px solid lightgray;
+  border-radius: 3px;
+  display: flex;
+  margin-left: 25px;
+  padding: 5px;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+
+.middle {
+  flex: 1;
+  padding: 0px 3px;
+}
+
+.logo {
+  font-family: 'Water Brush', cursive;
+  font-weight: bolder;
+  text-align: center;
+  font-size: large;
+}
+
+.right {
+  flex: 1;
+  padding: 0px 3px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.menu {
+  font-size: 14px;
+  cursor: pointer;
+  margin-left: 25px;
+}
+
+.announcements {
+  background-color: teal;
+  height: 30px;
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 500;
 }
