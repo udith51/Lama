@@ -1,9 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Water+Brush&display=swap');
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
 .navbar {
   height: 40px;
   padding: 10px 20px;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
@@ -11,57 +17,400 @@
 .left {
   flex: 1;
   display: flex;
+  flex-direction: row;
   align-items: center;
-  padding: 0px 3px;
+  padding: 0 3px;
 }
 
 .language {
   cursor: pointer;
 }
 
-.search-box {
+.searchBox {
   border: 0.5px solid lightgray;
   border-radius: 3px;
   display: flex;
   margin-left: 25px;
   padding: 5px;
-  flex-grow: 1;
-  justify-content: space-between;
+}
+
+input {
+  border: none;
 }
 
 .middle {
   flex: 1;
-  padding: 0px 3px;
+  text-align: center;
 }
 
 .logo {
   font-family: 'Water Brush', cursive;
   font-weight: bolder;
   text-align: center;
-  font-size: large;
+  font-size: x-large;
 }
 
 .right {
   flex: 1;
-  padding: 0px 3px;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
+  padding: 0px 3px;
 }
 
-.menu {
-  font-size: 14px;
+.menuItems {
   cursor: pointer;
   margin-left: 25px;
 }
 
+/* ------------------------------------- */
 .announcements {
   background-color: teal;
-  height: 30px;
   color: white;
+  text-align: center;
+  position: relative;
+  height: 25px;
+  display: flex;
+  align-items: center;
+}
+
+.message {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.close {
+  position: absolute;
+  right: 8px;
+  cursor: pointer;
+  padding: 3px;
+  transition: all 0.5s;
+}
+
+.close:hover {
+  color: black;
+  font-weight: bold;
+}
+
+/* ----------------------------------------- */
+.slider {
+  display: flex;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.arrow {
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background-color: #fff7f7;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.5;
+  cursor: pointer;
+  z-index: 2;
+}
+
+#left {
+  left: 10px;
+}
+
+#right {
+  right: 10px
+}
+
+.slideWrap {
+  height: 100%;
+  display: flex;
+}
+
+.slide {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.imgContainer {
+  flex: 0.8;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  margin-left: 5vw;
+}
+
+.model {
+  height: 80%;
+}
+
+.infoContainer {
+  flex: 1;
+}
+
+.slide>.infoContainer>.title {
+  font-size: 70px;
+}
+
+.description {
+  margin: 50px 0px;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 3px;
+}
+
+.button {
+  padding: 10px;
+  font-size: 20px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+/* ------------------------------------ */
+.categories {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.categoryItem {
+  flex: 1;
+  margin: 3px;
+  height: 70vh;
+  position: relative;
+}
+
+.categoryItem>img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.categoryItem>.infoContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.categoryItem>.infoContainer>.title {
+  color: white;
+  margin-bottom: 20px;
+}
+
+.categoryItem>.infoContainer>button {
+  border: none;
+  padding: 10px;
+  background-color: white;
+  color: gray;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* --------------------------------------- */
+.products {
+  padding: 20px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.productContainer {
+  margin: 5px;
+  height: 350px;
+  width: 280px;
+  background-color: #f5fbfd;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 14px;
-  font-weight: 500;
 }
+
+.circle {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: #fff;
+  position: absolute;
+}
+
+.productContainer>img {
+  height: 75%;
+  position: absolute;
+}
+
+.productContainer>.info {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 3;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+.productContainer>.info:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.info>.icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  transition: all 0.1s ease;
+}
+
+.info>.icon:hover {
+  background-color: #e9f5f5;
+  transform: scale(1.15);
+}
+
+/* ---------------------------------- */
+.newsletter {
+  height: 60vh;
+  background-color: #f9f5f5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.newsletter>.title {
+  font-size: 70px;
+  margin-bottom: 20px;
+}
+
+.newsletter>.description {
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-weight: 300;
+}
+
+.newsletter>.inputContainer {
+  width: 50%;
+  height: 40px;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid lightgray;
+}
+
+.inputContainer>input {
+  flex: 8;
+  border: none;
+  padding: 20px;
+  font-size: 15px;
+}
+
+.inputContainer>button {
+  flex: 1;
+  background-color: teal;
+  color: #fff;
+  border: none;
+}
+
+/* ----------------------------------- */
+.footer {
+  display: flex;
+}
+
+.footer>.left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.footer>.left>p {
+  margin: 20px 0;
+}
+
+.socialContainers {
+  display: flex;
+}
+
+.socialContainers>.icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: #fff;
+  margin-right: 20px;
+}
+
+.footer>.middle {
+  flex: 1;
+  padding: 20px;
+  background-color: #e9f5f5;
+}
+
+.footer>.middle>.title {
+  margin-bottom: 20px;
+  text-align: start;
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.listItem {
+  width: 50%;
+  text-align: start;
+  margin-bottom: 10px;
+}
+
+.footer>.right {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+
+.right>.title {
+  margin-bottom: 30px;
+}
+
+.right>img {
+  width: 50%;
+}
+
+.contactItem {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.contactItem>p {
+  margin-left: 10px;
+}
+
+/* ------------------------------------ */
