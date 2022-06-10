@@ -1,25 +1,12 @@
 import './App.css';
-import Announcements from './components/Announcements';
-import Navbar from './components/Navbar';
 import Home from './pages/Home';
-import Slider from './components/Slider'
-import Categories from './components/Categories';
-import Products from './components/Products';
-import Newsletter from './components/Newsletter';
-import Footer from './components/Footer';
+import ProductList from './pages/ProductList';
 
-function App() {
+export default function App() {
   return (
     <div className="App">
-      <Announcements />
-      <Navbar />
-      <Slider />
-      <Categories />
-      <Products />
-      <Newsletter />
-      <Footer />
+      {/* <Home /> */}
+      <ProductList />
     </div>
   );
 }
-
-export default App;

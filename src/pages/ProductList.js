@@ -1,23 +1,19 @@
 import Announcements from '../components/Announcements';
+import FilterContainer from '../components/FilterContainer';
 import Navbar from '../components/Navbar';
-import Slider from '../components/Slider'
-import Categories from '../components/Categories';
 import Products from '../components/Products';
 import Newsletter from '../components/Newsletter';
 import Footer from '../components/Footer';
-
-const Home = () => {
+export default function ProductList() {
     return (
-        <div className="home">
+        <div className="productList">
             <Announcements />
             <Navbar />
-            <Slider />
-            <Categories />
+            <h1>Dresses</h1>
+            <FilterContainer />
             <Products />
             <Newsletter />
             <Footer />
         </div>
-    );
+    )
 }
-
-export default Home;
