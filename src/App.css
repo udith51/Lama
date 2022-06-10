@@ -138,7 +138,7 @@ input {
   width: 100vw;
 }
 
-.imgContainer {
+.slider>.imgContainer {
   flex: 0.8;
   display: flex;
   align-items: center;
@@ -418,16 +418,16 @@ input {
   margin: 20px;
 }
 
-.filterContainer {
+.productList>.filterContainer {
   display: flex;
   justify-content: space-between;
 }
 
-.filter {
+.productList>.filterContainer>.filter {
   margin: 20px;
 }
 
-.filterText {
+.productList>.filterContainer>.filter>.filterText {
   font-size: 20px;
   font-weight: 400;
   margin-right: 20px;
@@ -436,4 +436,105 @@ input {
 select {
   padding: 10px;
   margin-right: 20px;
+}
+
+/* --------------------------------------- */
+.productDetails {
+  padding: 50px;
+  display: flex;
+}
+
+.productDetails>.imgContainer {
+  flex: 1;
+}
+
+.productDetails>.imgContainer>img {
+  width: 100%;
+  height: 90vh;
+  object-fit: cover;
+}
+
+.productDetails>.infoContainer {
+  flex: 1;
+  padding: 0 50px;
+}
+
+.productDetails>.infoContainer>h1 {
+  font-weight: 200;
+}
+
+.productDetails>.infoContainer>p {
+  margin: 20px 0;
+}
+
+.productDetails>.infoContainer>span {
+  font-weight: 100;
+  font-size: 40px;
+}
+
+.productDetails>.infoContainer>.filterContainer {
+  width: 50%;
+  margin: 30px 0px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.productDetails>.infoContainer>.filterContainer>.filter>.filterTitle {
+  font-size: 20px;
+  font-weight: 200;
+}
+
+.productDetails>.infoContainer>.filterContainer>.filter {
+  display: flex;
+  align-items: center;
+}
+
+.productDetails>.infoContainer>.filterContainer>.filter>.filterColor {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin: 0px 5px;
+  cursor: pointer;
+}
+
+.productDetails>.infoContainer>.filterContainer>.filter>.filterSize {
+  margin: 0 5px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.productDetails>.infoContainer>.addContainer {
+  display: flex;
+  width: 50%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.productDetails>.infoContainer>.addContainer>.amtContainer {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+}
+
+.productDetails>.infoContainer>.addContainer>.amtContainer>.amount {
+  width: 30px;
+  height: 30px;
+  border-radius: 10px;
+  border: 1px solid teal;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 5px;
+}
+
+.productDetails>.infoContainer>.addContainer>button {
+  cursor: pointer;
+  border: 2px solid teal;
+  padding: 15px;
+  background-color: white;
+  font-weight: 500;
+}
+
+.productDetails>.infoContainer>.addContainer>button:hover {
+  background-color: #f8f4f4;
 }
