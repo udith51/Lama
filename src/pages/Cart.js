@@ -1,17 +1,15 @@
 import Announcements from "../components/Announcements";
+import CartItems from "../components/CartItems";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
-import Newsletter from "../components/Newsletter";
-import ProductDetails from "../components/ProductDetails";
 
-export default function ProductInfo() {
+export default function Cart() {
     return (
-        <div className="productInfo">
+        <div className="cart">
 
             <Navbar />
             <Announcements />
-            <ProductDetails />
-            <Newsletter />
+            <CartItems />
             <Footer />
         </div>
     )
